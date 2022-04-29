@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IT342Project">
         <activity
+            android:name=".ArticlesMenu"
+            android:exported="true" />
+        <activity
             android:name=".SignUp"
             android:exported="true" />
         <activity
