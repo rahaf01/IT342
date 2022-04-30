@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IT342Project">
         <activity
-            android:name=".ArticlesMenu"
+            android:name=".Homepage"
             android:exported="true" />
         <activity
             android:name=".SignUp"
@@ -28,7 +28,7 @@
             android:name=".FigmaTest"
             android:exported="true" />
         <activity
-            android:name=".Homepage"
+            android:name=".ArticlesMenu"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
