@@ -8,6 +8,8 @@
     tools:context=".ArticlesMenu">
 
 
+
+
     <RelativeLayout
         android:layout_width="420dp"
         android:layout_height="730dp"
@@ -21,27 +23,15 @@
         app:layout_constraintVertical_bias="1.0">
 
 
-        <TextView
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="348dp"
-            android:layout_marginEnd="69dp"
-            android:text="What article you want to read?"
-            android:textColor="@color/white"
-            android:textSize="20dp" />
-
         <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="51dp"
+            android:id="@+id/articlesMenuSpinner"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="184dp"
-            android:layout_marginBottom="312dp"
-            android:background="@null"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="314dp"
+
             android:spinnerMode="dropdown"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +42,19 @@
             tools:ignore="RtlHardcoded">
 
         </Spinner>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="348dp"
+            android:layout_marginEnd="69dp"
+            android:text="What article you want to read?"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
 
 
 

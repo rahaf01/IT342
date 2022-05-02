@@ -2,8 +2,8 @@
     <string name="app_name">IT342 Project</string>
 
     <string-array name="pages">
-        <item></item>
-        <item>Goals</item>
-        <item>Articles</item>
+        <item>Choose</item>
+        <item>What is 4-7-8 excersie</item>
+        <item>Happy habits to relieve anxiety and stress</item>
     </string-array>
 </resources>

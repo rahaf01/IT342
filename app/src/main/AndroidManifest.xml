@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IT342Project">
         <activity
+            android:name=".ArticleTwo"
+            android:exported="true" />
+        <activity
             android:name=".Homepage"
             android:exported="true" />
         <activity
