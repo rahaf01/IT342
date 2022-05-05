@@ -26,9 +26,9 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
-            android:background="@drawable/homepage_background"
             android:layout_width="match_parent"
-            android:layout_height="130dp">
+            android:layout_height="141dp"
+            android:background="@drawable/homepage_background">
 
             <TextView
 
@@ -42,12 +42,11 @@
         </RelativeLayout>
 
         <GridLayout
-            android:background="@drawable/homepage_cards_background"
-
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
+            android:layout_height="462dp"
             android:alignmentMode="alignMargins"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/homepage_cards_background"
             android:columnCount="2"
             android:rowCount="2">
 
@@ -61,6 +60,7 @@
                 app:elevation="6dp">
 
                 <LinearLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -70,9 +70,10 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/plant" />
+                        android:src="@drawable/lungs" />
 
                     <TextView
+                        android:id="@+id/StartExercise"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -102,9 +103,10 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/plant" />
+                        android:src="@drawable/achievement" />
 
                     <TextView
+                        android:id="@+id/viewAchievements"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -134,9 +136,10 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/plant" />
+                        android:src="@drawable/article" />
 
                     <TextView
+                        android:id="@+id/readArticles"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -166,9 +169,10 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/plant" />
+                        android:src="@drawable/user" />
 
                     <TextView
+                        android:id="@+id/viewProfile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -180,8 +184,7 @@
             </androidx.cardview.widget.CardView>
 
 
-        </GridLayout
-            >
+        </GridLayout>
 
 
     </LinearLayout>

@@ -2,29 +2,20 @@ package com.example.it342project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.media.Image;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.github.florent37.viewanimator.ViewAnimator;
 
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity implements RecyclerViewInterface {
+public class MainActivity extends AppCompatActivity {
 
     Spinner menu;
     ImageView menuButton;
@@ -85,39 +76,39 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewInter
 //        menu.setAdapter(myAdapter);
 
 
-        menuButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                menu = (Spinner) findViewById(R.id.spinner);
-                menuButton = (ImageView) findViewById(R.id.imageView) ;
-
-                adapter = ArrayAdapter.createFromResource(getApplicationContext(), R.array.pages, android.R.layout.simple_spinner_item);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                menu.setAdapter(adapter);
-
-                menu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                        if (parent.getItemAtPosition(position).equals("")) {
-
-                        }// End of if statment
-
-                        else {
-                            Toast.makeText(getBaseContext(), parent.getItemAtPosition(position).toString() + " Selected", Toast.LENGTH_LONG).show();
-                        }// End of else statement
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-
-                    }
-                });
+//        menuButton.setOnClickListener(new View.OnClickListener() {
 //
-
-            }// End of onClick()
-        }); // End of setOnClickListener
+//            @Override
+//            public void onClick(View v) {
+//                menu = (Spinner) findViewById(R.id.spinner);
+//                menuButton = (ImageView) findViewById(R.id.imageView) ;
+//
+//                adapter = ArrayAdapter.createFromResource(getApplicationContext(), R.array.pages, android.R.layout.simple_spinner_item);
+//                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//                menu.setAdapter(adapter);
+//
+//                menu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//                    @Override
+//                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//
+//                        if (parent.getItemAtPosition(position).equals("")) {
+//
+//                        }// End of if statment
+//
+//                        else {
+//                            Toast.makeText(getBaseContext(), parent.getItemAtPosition(position).toString() + " Selected", Toast.LENGTH_LONG).show();
+//                        }// End of else statement
+//                    }
+//
+//                    @Override
+//                    public void onNothingSelected(AdapterView<?> parent) {
+//
+//                    }
+//                });
+////
+//
+//            }// End of onClick()
+//        }); // End of setOnClickListener
 
 
 
@@ -305,7 +296,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewInter
     // ----------------------------------------------------------------------------------------------
 
 
-    @Override
+  //  @Override
     public void whenItemClicked(int index) {
 
     }// End of whenItemClicked()
