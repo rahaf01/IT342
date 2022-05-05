@@ -6,51 +6,131 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/startBreathBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <!--    <Button-->
+    <!--        android:id="@+id/startBreathBtn"-->
+    <!--        android:layout_width="275dp"-->
+    <!--        android:layout_height="44dp"-->
+    <!--        android:layout_marginStart="24dp"-->
+
+    <!--        android:layout_marginEnd="24dp"-->
+    <!--        android:background="@drawable/background_btn"-->
+    <!--        android:text="Start"-->
+    <!--        app:backgroundTint="@null"-->
+
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.498"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.906" />-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="141dp"
+        android:background="@drawable/homepage_background"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.956" />
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="282dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="71dp"
+            android:layout_marginTop="56dp"
+            android:text="Breath and Relax"
+            android:textColor="#FFFF"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.755" />
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="34dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="25dp"
+            app:srcCompat="@drawable/_removal_ai__tmp_62734418697d1" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/startBreathBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/background_btn"
+        android:text="Start breath"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:backgroundTint="@null"
+        app:circularflow_radiusInDP="35"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.944" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="331dp"
-        android:layout_height="480dp"
+        android:layout_width="327dp"
+        android:layout_height="460dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.366"
+        app:layout_constraintVertical_bias="0.43"
         app:srcCompat="@drawable/_removal_ai__tmp_6261a57d590e8" />
 
     <TextView
         android:id="@+id/textViewTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="194dp"
+        android:layout_marginTop="67dp"
+        android:textColor="@color/text_color"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.336"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.819" />
+        app:layout_constraintVertical_bias="0.838" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/text_color"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
+        app:layout_constraintVertical_bias="0.85" />
+
+
     <!--
     <ImageButton
         android:id="@+id/imageButton2"

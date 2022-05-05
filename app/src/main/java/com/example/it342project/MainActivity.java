@@ -2,6 +2,7 @@ package com.example.it342project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button startBreathBtn;
     ImageView imageView;
+    ImageView backBtn;
     TextView timer;
     TextView textGuide;
 
@@ -45,7 +47,16 @@ public class MainActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.imageView3);
         timer = (TextView) findViewById(R.id.textViewTimer);
         textGuide = (TextView) findViewById(R.id.textView);
+        backBtn = (ImageView) findViewById(R.id.backBtn);
 
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Homepage.class);
+                startActivity(intent);
+            }// End of onClick()
+        }); // End of setOnClickListener
 
         startBreathBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     }// End of main method
 
     public void inheal() {
@@ -158,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
         } .start(); // End of CountDownTimer()
 
         timeRunning = true;
-        startBreathBtn.setText("Inheal");
+     //   startBreathBtn.setText("Inheal");
 
     }// End of start ()
 
@@ -213,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
         } .start(); // End of CountDownTimer()
 
         timeRunning = true;
-        startBreathBtn.setText("Hold");
+      //  startBreathBtn.setText("Hold");
 
 
     }// End of startHoldTime ()
@@ -271,14 +283,14 @@ public class MainActivity extends AppCompatActivity {
         } .start(); // End of CountDownTimer()
 
         timeRunning = true;
-        startBreathBtn.setText("Exheal");
+      //  startBreathBtn.setText("Exheal");
 
     }// End of startExhalTime ()
 
     public void stopExhealTime () {
 
         countDownTimer.cancel();
-        startBreathBtn.setText("Start after hold");
+    //    startBreathBtn.setText("Start after hold");
         timeRunning = false;
 
     }// End of stopExhealTime ()

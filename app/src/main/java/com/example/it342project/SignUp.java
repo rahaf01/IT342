@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
@@ -16,6 +17,8 @@ public class SignUp extends AppCompatActivity {
     EditText conf_Password;
 
     Button signup;
+
+    TextView login;
 
     DBSQLlight DB = new DBSQLlight(this);
 
@@ -29,6 +32,21 @@ public class SignUp extends AppCompatActivity {
         conf_Password = findViewById(R.id.conf_password);
 
         signup = findViewById(R.id.signupBtn);
+
+        login = findViewById(R.id.textView6);
+
+
+        //When user click on login button to move to login page
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(),Login.class);
+                startActivity(intent);
+
+            }// End of onClick
+        });// End of  signup.setOnClickListener
+
 
         // When sign up btn is clicked
         signup.setOnClickListener(new View.OnClickListener() {
@@ -72,5 +90,5 @@ public class SignUp extends AppCompatActivity {
 
 
 
-    }
-}
+    }// End of main method
+}// End of class

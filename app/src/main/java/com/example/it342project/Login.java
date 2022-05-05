@@ -18,6 +18,8 @@ public class Login extends AppCompatActivity {
     Button login;
     TextView signup;
 
+    TextView forgetPassword;
+
     DBSQLlight DB = new DBSQLlight(this);
 
     @Override
@@ -32,6 +34,8 @@ public class Login extends AppCompatActivity {
 
         signup = findViewById(R.id.textView6);
 
+        forgetPassword = findViewById(R.id.textView3);
+
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +43,16 @@ public class Login extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),SignUp.class);
                 startActivity(intent);
             }// End of onClick()
-        }); // End of setOnClickListener(
+        }); // End of setOnClickListener()
+
+
+        forgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),Reset_Password.class);
+                startActivity(intent);
+            }// End of onClick()
+        }); // End of setOnClickListener()
 
 
 

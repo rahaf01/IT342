@@ -99,7 +99,7 @@ public class DBSQLlight <pubilc> extends SQLiteOpenHelper {
     //........................................................................
 
     //Update users password (from view profile page)
-    public boolean updatePassword (String email, String password, String newPassword ) {
+    public boolean updatePassword (String email, String newPassword ) {
 
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues= new ContentValues();
