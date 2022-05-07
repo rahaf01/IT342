@@ -22,20 +22,33 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="111dp"
                 android:text="What is 4-7-8?"
                 android:textColor="#FFFF"
                 android:textSize="30sp" />
 
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="37dp"
+                android:layout_height="34dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="35dp"
+                app:srcCompat="@drawable/ic_backbtn2" />
+
         </RelativeLayout>
 
         <GridLayout
-            android:background="@drawable/homepage_cards_background"
-
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
 
+            android:layout_height="539dp"
             android:alignmentMode="alignMargins"
+
+            android:background="@drawable/homepage_cards_background"
             android:columnCount="1"
             android:rowCount="1">
 
@@ -57,8 +70,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="177dp"
+                        android:layout_height="101dp"
                         android:src="@drawable/coffee_break_pana" />
 
                     <TextView
@@ -67,11 +80,19 @@
                         android:layout_marginTop="12dp"
                         android:text="The 4-7-8 breathing technique was developed by an internationally renowned doctor and integrative medicine pioneer, Dr. Andrew Weil. According to Weil, it is the most effective way of managing anxiety and stress that he’s found in his decades of experience.
 
-Deep breaths — like those used in the 4-7-8 technique — are useful for combating anxiety because they help fortify the connection between mind and body. As you slow your breathing and focus fully on the breaths you’re taking, your parasympathetic nervous system becomes engaged.
+Deep breaths such as this technique are useful for combating anxiety because they help fortify the connection between mind and body. As you slow your breathing and focus fully on the breaths you’re taking, your parasympathetic nervous system becomes engaged.
 
 In turn, your body is flooded with a wave of relaxation. As your body untenses, your mind — forced to focus on the mechanics of the breath — can take a break from its constant swirl of worries.
 
-When it comes to managing anxiety and stress in a holistic way, 4-7-8 breathing is hard to beat. It is one of the better breathing exercises for this. " />
+When it comes to managing anxiety and stress in a holistic way, 4-7-8 breathing is hard to beat. It is one of the better breathing exercises for this.
+
+4-7-8 breathing is a simple  exercise that can be done anywhere, anytime. Essentially, the technique follows this easy pattern: breathe in, to the count of 4, hold your breath to the count of 7, and breathe out to the count of 8
+
+This cycle should be repeated four times, twice per day."
+
+                        android:textAlignment="center"
+                        android:justificationMode="inter_word"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -79,8 +100,7 @@ When it comes to managing anxiety and stress in a holistic way, 4-7-8 breathing 
             </androidx.cardview.widget.CardView>
 
 
-        </GridLayout
-            >
+        </GridLayout>
 
 
     </LinearLayout>

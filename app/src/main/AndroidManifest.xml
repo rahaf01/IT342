@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IT342Project">
         <activity
+            android:name=".AchievementsMenu"
+            android:exported="true" />
+        <activity
             android:name=".Reset_Password"
             android:exported="true" />
         <activity
             android:name=".ArticleTwo"
+            android:exported="true" />
+        <activity
+            android:name=".ArticleOne"
             android:exported="true" />
         <activity
             android:name=".ArticlesMenu"

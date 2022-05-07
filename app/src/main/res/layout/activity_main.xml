@@ -42,8 +42,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="71dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginStart="83dp"
+            android:layout_marginTop="28dp"
             android:text="Breath and Relax"
             android:textColor="#FFFF"
             android:textSize="35sp"
@@ -56,13 +56,13 @@
 
         <ImageView
             android:id="@+id/backBtn"
-            android:layout_width="34dp"
-            android:layout_height="38dp"
+            android:layout_width="37dp"
+            android:layout_height="34dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="25dp"
-            app:srcCompat="@drawable/_removal_ai__tmp_62734418697d1" />
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="35dp"
+            app:srcCompat="@drawable/ic_backbtn2" />
 
     </RelativeLayout>
 

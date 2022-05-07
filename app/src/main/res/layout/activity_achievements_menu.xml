@@ -18,26 +18,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
-
-        <!--        <Spinner-->
-<!--            android:id="@+id/articlesMenuSpinner"-->
-<!--            android:layout_width="260dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_alignParentEnd="true"-->
-<!--            android:layout_alignParentBottom="true"-->
-<!--            android:layout_marginEnd="70dp"-->
-<!--            android:layout_marginBottom="314dp"-->
-<!--            android:spinnerMode="dropdown"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.236"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.025"-->
-<!--            tools:ignore="RtlHardcoded">-->
-
-<!--        </Spinner>-->
-
         <ImageView
             android:layout_width="373dp"
             android:layout_height="526dp"
@@ -46,7 +26,7 @@
             android:layout_marginTop="84dp"
             android:layout_marginEnd="20dp"
             android:alpha="0.2"
-            android:src="@drawable/article" />
+            android:src="@drawable/achievement" />
 
         <Spinner
             android:id="@+id/articlesMenuSpinner"
@@ -67,9 +47,9 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="279dp"
             android:layout_marginEnd="33dp"
-            android:text="What article you want to read?"
+            android:text="Choose achievements type to view"
             android:textColor="@color/primary_color"
-            android:textSize="25sp" />
+            android:textSize="22sp" />
 
         <ImageView
             android:id="@+id/backBtn"
