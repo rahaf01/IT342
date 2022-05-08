@@ -66,19 +66,19 @@ tools:context=".UserGoals">
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="16dp"
-                >
+                android:padding="16dp">
 
                 <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/checklist" />
-                <TableLayout
                     android:layout_marginTop="20dp"
                     android:layout_width="300dp"
-                    android:layout_height="400dp"
-                    android:id="@+id/Achievements"
-                    >
+                    android:layout_height="300dp"
+                    android:src="@drawable/checklist" />
+                <TableLayout
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/Achievements">
                     <!-- Table Heading -->
                     <TableRow
                         android:layout_width="match_parent"
@@ -133,8 +133,6 @@ tools:context=".UserGoals">
                             android:textColor="@color/white"
                             android:layout_weight="4"/>
                     </TableRow>
-
-
                 </TableLayout>
 
 
