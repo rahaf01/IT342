@@ -13,16 +13,26 @@ import java.util.Calendar;
 public class UserGoals extends AppCompatActivity {
 
     TableLayout TableView;
-    TextView textv;
+    TextView counter,date;
     Calendar calendar;
     String currentDate;
-    DBSQLlight DB = new DBSQLlight(this);
-    String email = Login.userEmail;
+   // DBSQLlight DB = new DBSQLlight(this);
+  //  String email = Login.userEmail;
+    Integer count = MainActivity.counter;
+    // String CurrentDate = MainActivity.currentDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_goals);
+        //-----------------------------------
+        counter = findViewById(R.id.counter);
+        date = findViewById(R.id.date);
+        counter.setText(count);
+       // date.setText(CurrentDate);
+        //-----------------------------------
+
+        /*
         calendar = Calendar.getInstance();
         currentDate = DateFormat.getDateInstance().format(calendar.getTime());
         TableView = findViewById(R.id.Achievements);
@@ -33,5 +43,7 @@ public class UserGoals extends AppCompatActivity {
             buffer.append(" " + res.getString(1)+"\n");
 
         }
+
+         */
     }
 }

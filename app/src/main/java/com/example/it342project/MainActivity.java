@@ -43,8 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
     //////////////////////////////////////////
     Calendar calendar;
-    String currentDate;
+   public static String currentDate;
     String currentTime;
+    public static Integer counter = 0;
     //Date currentTime = Calendar.getInstance().getTime();
     DBSQLlight DB = new DBSQLlight(this);
     /////////////////////////////////////////
@@ -59,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
         timer = (TextView) findViewById(R.id.textViewTimer);
         textGuide = (TextView) findViewById(R.id.textView);
         backBtn = (ImageView) findViewById(R.id.backBtn);
-
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -287,6 +287,8 @@ public class MainActivity extends AppCompatActivity {
             public void onTick(long l) {
                 exhealTime = l;
                 changeExhealTimeText();
+             counter +=1;
+            //    currentDate = DateFormat.getDateInstance().format(calendar.getTime());
             } // End of onTick ()
 
             @Override
@@ -298,17 +300,18 @@ public class MainActivity extends AppCompatActivity {
       //  startBreathBtn.setText("Exheal");
 
         ///////////////////////////////////////////////////////////////////////////
-        calendar = Calendar.getInstance();
-        currentDate = DateFormat.getDateInstance().format(calendar.getTime());
+       // calendar = Calendar.getInstance();
+       // currentDate = DateFormat.getDateInstance().format(calendar.getTime());
 //        currentTime = Calendar.getInstance().getTime();
+        /*
         Boolean insert = DB.insertData(userEmail, "currentDate", "currentTime", 0);
         if(insert){
             Toast.makeText(MainActivity.this, "true", Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(MainActivity.this, "false", Toast.LENGTH_SHORT).show();
         }
+         */
 
-      //  insert = DB.
         ///////////////////////////////////////////////////////////////////////////
 
     }// End of startExhalTime ()

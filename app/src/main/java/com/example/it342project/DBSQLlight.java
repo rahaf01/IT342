@@ -18,7 +18,7 @@ public class DBSQLlight <pubilc> extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("create Table Usersinfo (email TEXT primary key, password TEXT)");
-        sqLiteDatabase.execSQL("create Table UserAchievement (email TEXT, currentDate TEXT primary key, currentTime TEXT primary key, counter Int)");
+      //  sqLiteDatabase.execSQL("create Table UserAchievement (email TEXT, currentDate TEXT primary key, currentTime TEXT primary key, counter Int)");
 
     }// End of onCreate
 
@@ -134,7 +134,7 @@ public class DBSQLlight <pubilc> extends SQLiteOpenHelper {
     //........................................................................
 
     //........................................................................
-
+/*
     public Boolean insertData(String email, String currentDate, String currentTime, Integer counter){
 
         SQLiteDatabase DB = this.getWritableDatabase();
@@ -159,4 +159,6 @@ public class DBSQLlight <pubilc> extends SQLiteOpenHelper {
         Cursor cursor = DB.rawQuery("Select currentDate, currentTime from UserAchievement where email = ?", new String[]{email});
         return cursor;
     }
+
+ */
 }// End of class
