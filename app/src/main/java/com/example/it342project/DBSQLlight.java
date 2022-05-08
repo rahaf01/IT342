@@ -124,11 +124,11 @@ public class DBSQLlight <pubilc> extends SQLiteOpenHelper {
         }// End of else statement - cursor <= 0
     }// End of insertCallerData
 
-    public Cursor getdata(){
-        SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("select currentDate from Usersinfo", null);
-        return cursor;
-    }
+//    public Cursor getdata(){
+//        SQLiteDatabase DB = this.getWritableDatabase();
+//        Cursor cursor = DB.rawQuery("select CurrentDate from Usersinfo", null);
+//        return cursor;
+//    }
     //........................................................................
 
     //........................................................................

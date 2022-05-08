@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
 
+    public static String userEmail;
+
     EditText email;
     EditText password;
 
@@ -22,7 +24,8 @@ public class Login extends AppCompatActivity {
 
     DBSQLlight DB = new DBSQLlight(this);
 
-    public static String userEmail;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,8 +72,7 @@ public class Login extends AppCompatActivity {
                 }// End of if statement
                 else {
                     if (DB.doesAccountExist(enteredEmail , enteredPassword)) {
-                        userEmail = enteredEmail;
-                     //   username = receviedUsername;
+                       userEmail = enteredEmail;
                         Intent intent = new Intent(getApplicationContext(),Homepage.class);
                         startActivity(intent);
                     }// End of if statement - User account does exist

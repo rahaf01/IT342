@@ -45,6 +45,7 @@ public class Homepage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),UserGoals.class);
                 startActivity(intent);
+
             }// End of onClick()
         }); // End of setOnClickListener
 

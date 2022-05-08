@@ -75,6 +75,10 @@ public class MainActivity extends AppCompatActivity {
                 inhealTime = 5000; // 4 seconds starting from 4
                 holdTime = 8000; // 7 seconds starting from 7
                 exhealTime = 9000; // 8 seconds starting from 8
+
+                counter +=1;
+            //    currentDate = DateFormat.getDateInstance().format(calendar.getTime());
+
                 inheal();
              //   Toast.makeText(MainActivity.this, "Button is clicked", Toast.LENGTH_SHORT).show();
 
@@ -287,7 +291,6 @@ public class MainActivity extends AppCompatActivity {
             public void onTick(long l) {
                 exhealTime = l;
                 changeExhealTimeText();
-             counter +=1;
             //    currentDate = DateFormat.getDateInstance().format(calendar.getTime());
             } // End of onTick ()
 
@@ -297,6 +300,9 @@ public class MainActivity extends AppCompatActivity {
         } .start(); // End of CountDownTimer()
 
         timeRunning = true;
+
+        counter +=1;
+       // currentDate = DateFormat.getDateInstance().format(calendar.getTime());
       //  startBreathBtn.setText("Exheal");
 
         ///////////////////////////////////////////////////////////////////////////

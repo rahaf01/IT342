@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IT342Project" >
+
         <activity
             android:name=".UserGoals"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".UpdatePassword"
             android:exported="true" />
@@ -20,9 +21,6 @@
             android:exported="true" />
         <activity
             android:name=".ViewProfile"
-            android:exported="true" />
-        <activity
-            android:name=".AchievementsMenu"
             android:exported="true" />
         <activity
             android:name=".Reset_Password"
