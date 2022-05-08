@@ -17,7 +17,7 @@ public class DBSQLlight <pubilc> extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("create Table Usersinfo (email TEXT primary key, password TEXT)");
+        sqLiteDatabase.execSQL("create Table Usersinfo (email TEXT primary key, password TEXT, CurrentDate Text, CurrentTime Text)");
     }// End of onCreate
 
     @Override
@@ -49,13 +49,16 @@ public class DBSQLlight <pubilc> extends SQLiteOpenHelper {
     }// End of isAccountExist
     //........................................................................
 
-    public Boolean insertData(String email, String password){
+    public Boolean insertData(String email, String password, String CurrentDate, String CurrentTime){
 
         SQLiteDatabase DB = this.getWritableDatabase();
 
         ContentValues contentValues= new ContentValues();
         contentValues.put("email", email);
         contentValues.put("password", password);
+        contentValues.put("date", CurrentDate);
+        contentValues.put("time", CurrentTime);
+
 
         long result = DB.insert("Usersinfo", null, contentValues);
 
@@ -121,6 +124,11 @@ public class DBSQLlight <pubilc> extends SQLiteOpenHelper {
         }// End of else statement - cursor <= 0
     }// End of insertCallerData
 
+    public Cursor getdata(){
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor = DB.rawQuery("select currentDate from Usersinfo", null);
+        return cursor;
+    }
     //........................................................................
 
     //........................................................................
