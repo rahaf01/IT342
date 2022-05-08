@@ -76,14 +76,29 @@ tools:context=".Goals">
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="35dp"
-                            android:text="number"
-                            android:layout_marginLeft="10dp"
+                            android:text="Date"
                             android:textSize="18dp"
                             android:textStyle="bold"
                             android:textAlignment="center"
                             android:textColor="@color/white"
-                            android:layout_weight="4"
-                            android:gravity="center"/>
+                            android:layout_weight="4"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="Time"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:layout_weight="4"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#c3ced7">
+
+
+
 
                         <TextView
                             android:layout_width="match_parent"
@@ -108,60 +123,6 @@ tools:context=".Goals">
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#c3ced7">
-                        <TextView
-                            android:id="@+id/textView4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_row="0"
-                            android:layout_column="0"
-                            android:text="TextView" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="35dp"
-                            android:text="number"
-                            android:layout_marginLeft="10dp"
-                            android:textSize="18dp"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:layout_weight="4"
-                            android:gravity="center"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="35dp"
-                            android:text="Date"
-                            android:textSize="18dp"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:layout_weight="4"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="35dp"
-                            android:text="Time"
-                            android:textSize="18dp"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:layout_weight="4"/>
-                    </TableRow>
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#c3ced7">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="35dp"
-                            android:text="number"
-                            android:layout_marginLeft="10dp"
-                            android:textSize="18dp"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:layout_weight="4"
-                            android:gravity="center"/>
 
                         <TextView
                             android:layout_width="match_parent"

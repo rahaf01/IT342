@@ -22,6 +22,7 @@ public class Login extends AppCompatActivity {
 
     DBSQLlight DB = new DBSQLlight(this);
 
+    public static String userEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +69,7 @@ public class Login extends AppCompatActivity {
                 }// End of if statement
                 else {
                     if (DB.doesAccountExist(enteredEmail , enteredPassword)) {
+                        userEmail = enteredEmail;
                      //   username = receviedUsername;
                         Intent intent = new Intent(getApplicationContext(),Homepage.class);
                         startActivity(intent);

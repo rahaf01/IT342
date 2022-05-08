@@ -64,7 +64,7 @@ public class SignUp extends AppCompatActivity {
                         Boolean isUserRegistered = DB.doesEmailExist(newEmail);
 
                         if (isUserRegistered == false) {
-                            Boolean insert = DB.insertData(newEmail, newPassword, null, null);
+                            Boolean insert = DB.insertData(newEmail, newPassword);
 
                             if (insert) {
                             //    username = newUsername;

@@ -17,6 +17,7 @@ public class UserGoals extends AppCompatActivity {
     Calendar calendar;
     String currentDate;
     DBSQLlight DB = new DBSQLlight(this);
+    String email = Login.userEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +26,12 @@ public class UserGoals extends AppCompatActivity {
         calendar = Calendar.getInstance();
         currentDate = DateFormat.getDateInstance().format(calendar.getTime());
         TableView = findViewById(R.id.Achievements);
-        textv = findViewById(R.id.textView4);
-        Cursor res = DB.getdata();
+        Cursor res = DB.getAchievementdata(email);
         StringBuffer buffer = new StringBuffer();
         while(res.moveToNext()){
             buffer.append(" " + res.getString(0)+"\n");
+            buffer.append(" " + res.getString(1)+"\n");
+
         }
     }
 }

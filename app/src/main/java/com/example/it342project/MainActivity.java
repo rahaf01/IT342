@@ -14,10 +14,10 @@ import com.github.florent37.viewanimator.ViewAnimator;
 
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.util.Calendar;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,13 +37,15 @@ public class MainActivity extends AppCompatActivity {
     long exhealTime = 9000; // 8 seconds starting from 8
     boolean timeRunning;
 
-
+    String userEmail = Login.userEmail;
     boolean isDone = false;
 
 
     //////////////////////////////////////////
     Calendar calendar;
     String currentDate;
+    String currentTime;
+    //Date currentTime = Calendar.getInstance().getTime();
     DBSQLlight DB = new DBSQLlight(this);
     /////////////////////////////////////////
     @Override
@@ -298,7 +300,15 @@ public class MainActivity extends AppCompatActivity {
         ///////////////////////////////////////////////////////////////////////////
         calendar = Calendar.getInstance();
         currentDate = DateFormat.getDateInstance().format(calendar.getTime());
-        Boolean insert = DB.insertData("", "", "currentDate", null);
+//        currentTime = Calendar.getInstance().getTime();
+        Boolean insert = DB.insertData(userEmail, "currentDate", "currentTime", 0);
+        if(insert){
+            Toast.makeText(MainActivity.this, "true", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(MainActivity.this, "false", Toast.LENGTH_SHORT).show();
+        }
+
+      //  insert = DB.
         ///////////////////////////////////////////////////////////////////////////
 
     }// End of startExhalTime ()

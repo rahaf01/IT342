@@ -17,7 +17,9 @@ public class DBSQLlight <pubilc> extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("create Table Usersinfo (email TEXT primary key, password TEXT, CurrentDate Text, CurrentTime Text)");
+        sqLiteDatabase.execSQL("create Table Usersinfo (email TEXT primary key, password TEXT)");
+        sqLiteDatabase.execSQL("create Table UserAchievement (email TEXT, currentDate TEXT primary key, currentTime TEXT primary key, counter Int)");
+
     }// End of onCreate
 
     @Override
@@ -49,15 +51,13 @@ public class DBSQLlight <pubilc> extends SQLiteOpenHelper {
     }// End of isAccountExist
     //........................................................................
 
-    public Boolean insertData(String email, String password, String CurrentDate, String CurrentTime){
+    public Boolean insertData(String email, String password){
 
         SQLiteDatabase DB = this.getWritableDatabase();
 
         ContentValues contentValues= new ContentValues();
         contentValues.put("email", email);
         contentValues.put("password", password);
-        contentValues.put("date", CurrentDate);
-        contentValues.put("time", CurrentTime);
 
 
         long result = DB.insert("Usersinfo", null, contentValues);
@@ -132,4 +132,31 @@ public class DBSQLlight <pubilc> extends SQLiteOpenHelper {
     //........................................................................
 
     //........................................................................
+
+    //........................................................................
+
+    public Boolean insertData(String email, String currentDate, String currentTime, Integer counter){
+
+        SQLiteDatabase DB = this.getWritableDatabase();
+
+        ContentValues contentValues= new ContentValues();
+        contentValues.put("email", email);
+        contentValues.put("currentDate", currentDate);
+        contentValues.put("currentTime", currentTime);
+       // contentValues.put("counter", counter);
+
+
+        long result = DB.insert("UserAchievement", null, contentValues);
+
+        if(result == -1)
+            return false;
+        else
+            return true;
+    } // End of insertData
+    //........................................................................
+    public Cursor getAchievementdata(String email){
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor = DB.rawQuery("Select currentDate, currentTime from UserAchievement where email = ?", new String[]{email});
+        return cursor;
+    }
 }// End of class
