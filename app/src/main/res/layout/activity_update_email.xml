@@ -42,60 +42,220 @@
 
         </RelativeLayout>
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="352dp"
-            android:layout_height="367dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="120dp"
-            android:layout_marginEnd="24dp"
-            android:orientation="vertical">
+<!--        <GridLayout-->
+<!--            android:layout_width=""-->
+<!--            android:layout_height=""-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="12dp"-->
+<!--            app:cardCornerRadius="12dp"-->
+<!--            app:elevation="6dp">-->
 
-            <EditText
-                android:id="@+id/preEmail"
-                android:layout_width="match_parent"
+<!--        <LinearLayout-->
+<!--            android:id="@+id/linearLayout"-->
+<!--            android:layout_width="352dp"-->
+<!--            android:layout_height="300dp"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:layout_marginTop="60dp"-->
+<!--            android:layout_marginEnd="24dp"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/preEmail"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/background_edittext"-->
+<!--                android:drawableRight="@drawable/ic_email"-->
+<!--                android:ems="10"-->
+<!--                android:hint="Current Email"-->
+<!--                android:inputType="textEmailAddress"-->
+<!--                android:padding="17dp" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/newEmail"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:background="@drawable/background_edittext"-->
+<!--                android:drawableRight="@drawable/ic_email"-->
+<!--                android:ems="10"-->
+<!--                android:hint="New Email"-->
+<!--                android:inputType="textEmailAddress"-->
+<!--                android:padding="17dp" />-->
+
+
+<!--            <Button-->
+<!--                android:id="@+id/loginBtn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_marginEnd="24dp"-->
+<!--                android:background="@drawable/background_btn"-->
+<!--                android:text="Reset"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="18sp"-->
+<!--                app:backgroundTint="@null"-->
+<!--                app:circularflow_radiusInDP="35"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.0"-->
+<!--                app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+        <GridLayout
+            android:background="@drawable/homepage_cards_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:layout_marginTop="70dp"
+            android:columnCount="1"
+            android:rowCount="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/background_edittext"
-                android:drawableRight="@drawable/ic_email"
-                android:ems="10"
-                android:hint="Current Email"
-                android:inputType="textEmailAddress"
-                android:padding="17dp" />
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:elevation="6dp">
 
-            <EditText
-                android:id="@+id/newEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/background_edittext"
-                android:drawableRight="@drawable/ic_email"
-                android:ems="10"
-                android:hint="New Email"
-                android:inputType="textEmailAddress"
-                android:padding="17dp" />
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="330dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/preEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_edittext"
+                        android:drawableRight="@drawable/ic_email"
+                        android:ems="10"
+                        android:hint="Current Email"
+                        android:inputType="textEmailAddress"
+                        android:padding="17dp" />
+
+                    <EditText
+                        android:id="@+id/newEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/background_edittext"
+                        android:drawableRight="@drawable/ic_email"
+                        android:ems="10"
+                        android:hint="New Email"
+                        android:inputType="textEmailAddress"
+                        android:padding="17dp" />
 
 
-            <Button
-                android:id="@+id/loginBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/background_btn"
-                android:text="Reset"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                app:backgroundTint="@null"
-                app:circularflow_radiusInDP="35"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent" />
+                    <Button
+                        android:id="@+id/loginBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="24dp"
+                        android:background="@drawable/background_btn"
+                        android:text="Reset"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:backgroundTint="@null"
+                        app:circularflow_radiusInDP="35"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </LinearLayout>
 
-        </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
 
     </LinearLayout>
 
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<ScrollView-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".UserGoals">-->
+
+<!--    <LinearLayout-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <RelativeLayout-->
+<!--            android:background="@drawable/homepage_background"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="130dp">-->
+
+<!--            <TextView-->
+
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_marginEnd="56dp"-->
+<!--                android:text="Daily Achievements"-->
+<!--                android:textColor="#FFFF"-->
+<!--                android:textSize="30sp" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/backBtn"-->
+<!--                android:layout_width="37dp"-->
+<!--                android:layout_height="34dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_marginStart="22dp"-->
+<!--                android:layout_marginTop="35dp"-->
+<!--                app:srcCompat="@drawable/ic_backbtn2" />-->
+
+<!--        </RelativeLayout>-->
+
+<!--        <GridLayout-->
+<!--            android:background="@drawable/homepage_cards_background"-->
+
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+
+<!--            android:alignmentMode="alignMargins"-->
+<!--            android:columnCount="1"-->
+<!--            android:rowCount="1">-->
+
+<!--            <androidx.cardview.widget.CardView-->
+
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_rowWeight="1"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_margin="12dp"-->
+<!--                app:cardCornerRadius="12dp"-->
+<!--                app:elevation="6dp"/>-->
+
+
+<!--        </GridLayout>-->
+
+
+<!--    </LinearLayout>-->
+
+
+<!--</ScrollView>-->

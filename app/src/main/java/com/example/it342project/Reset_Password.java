@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Reset_Password extends AppCompatActivity {
 
+    ImageView backBtn;
 
     EditText email;
     EditText password;
@@ -69,6 +71,16 @@ public class Reset_Password extends AppCompatActivity {
             }// End of onClick
         });// End of  signup.setOnClickListener
 
+
+        backBtn = (ImageView) findViewById(R.id.backBtn);
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Login.class);
+                startActivity(intent);
+            }// End of onClick()
+        }); // End of setOnClickListener
 
 
 

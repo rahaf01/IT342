@@ -18,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="130dp">
 
+
             <TextView
 
                 android:layout_width="wrap_content"
@@ -39,6 +40,21 @@
                 android:layout_marginStart="22dp"
                 android:layout_marginTop="35dp"
                 app:srcCompat="@drawable/ic_backbtn2" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="155dp"
+                android:layout_marginBottom="26dp"
+                android:text="By ANAHANA"
+                android:textColor="@color/text_color2"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </RelativeLayout>
 
@@ -70,8 +86,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="177dp"
-                        android:layout_height="101dp"
+                        android:layout_width="236dp"
+                        android:layout_height="138dp"
                         android:src="@drawable/coffee_break_pana" />
 
                     <TextView

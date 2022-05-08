@@ -37,13 +37,11 @@ public class SignUp extends AppCompatActivity {
 
 
         //When user click on login button to move to login page
-        signup.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent = new Intent(getApplicationContext(),Login.class);
                 startActivity(intent);
-
             }// End of onClick
         });// End of  signup.setOnClickListener
 

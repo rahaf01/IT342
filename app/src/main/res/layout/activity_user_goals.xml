@@ -24,7 +24,7 @@ tools:context=".UserGoals">
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="30dp"
-            android:layout_marginEnd="34dp"
+            android:layout_marginEnd="56dp"
             android:text="Daily Achievements"
             android:textColor="#FFFF"
             android:textSize="30sp" />
@@ -43,11 +43,10 @@ tools:context=".UserGoals">
 
     <GridLayout
         android:background="@drawable/homepage_cards_background"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:alignmentMode="alignMargins"
+        android:layout_marginTop="50dp"
         android:columnCount="1"
         android:rowCount="1">
 
@@ -69,10 +68,10 @@ tools:context=".UserGoals">
                 android:padding="16dp">
 
                 <ImageView
+                    android:layout_width="301dp"
+                    android:layout_height="257dp"
                     android:layout_marginTop="20dp"
-                    android:layout_width="300dp"
-                    android:layout_height="300dp"
-                    android:src="@drawable/checklist" />
+                    android:src="@drawable/progress" />
                 <TableLayout
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="20dp"

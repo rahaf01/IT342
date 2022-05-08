@@ -3,6 +3,7 @@ package com.example.it342project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.MailTo;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -306,6 +307,38 @@ public class MainActivity extends AppCompatActivity {
 
         counter +=1;
         currentDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
+
+//        Intent email = new Intent(Intent.ACTION_SEND);
+//        email.putExtra(Intent.EXTRA_EMAIL, new String[]{ "to" + userEmail});
+//        email.putExtra(Intent.EXTRA_SUBJECT, "Your Daily Breathing Achievement");
+//        email.putExtra(Intent.EXTRA_TEXT, "You did "+ counter + "Times at " + currentDate );
+//
+//        email.setType("message/rfc822");
+//        startActivity(Intent.createChooser(email, "Choose an Email client :"));
+
+//        String sub="Thank you for your online registration" ;
+//        MailTo m = new MailTo("emailid", "password");
+//
+//        String[] toArr = {"testecn2@gmail.com",sEmailId};
+//        m.setFrom("testecn2@gmail.com");
+//
+//        m.setTo(toArr);
+//        m.setSubject(sub);
+//        m.setBody(msg);
+//
+//        try{
+//
+//            if(m.send()) {
+//                //successful
+//            } else {
+//                //failure
+//            }
+//        } catch(Exception e) {
+//
+//            Log.e("MailApp", "Could not send email", e);
+//        }
+
+
 
         // currentDate = DateFormat.getDateInstance().format(calendar.getTime().toString());
       //  startBreathBtn.setText("Exheal");

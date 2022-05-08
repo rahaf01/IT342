@@ -46,15 +46,25 @@ public class UpdateEmail extends AppCompatActivity {
 
               else {
 
-                  if (DB.updateEmail(enteredPreEmail, enteredNewEmail)) {
-                      Toast.makeText(UpdateEmail.this, "Email update success", Toast.LENGTH_SHORT).show();
+                  if (DB.doesEmailExist(enteredNewEmail)) {
+                      Toast.makeText(UpdateEmail.this, "The email already exist", Toast.LENGTH_SHORT).show();
 
-                  }// End of inner if statement
-
+                  }
                   else {
-                      Toast.makeText(UpdateEmail.this, "Email update field", Toast.LENGTH_SHORT).show();
 
-                  }// End of inner else statement
+
+
+                      if (DB.updateEmail(enteredPreEmail, enteredNewEmail)) {
+                          Toast.makeText(UpdateEmail.this, "Email update success", Toast.LENGTH_SHORT).show();
+
+                      }// End of inner if statement
+
+                      else {
+                          Toast.makeText(UpdateEmail.this, "Email update field", Toast.LENGTH_SHORT).show();
+
+                      }// End of inner else statement
+
+                  }// End of mid else statement
 
                 }// End of else statement
             }// End of onClick()
