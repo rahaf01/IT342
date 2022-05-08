@@ -61,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
         startBreathBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                inhealTime = 5000; // 4 seconds starting from 4
+                holdTime = 8000; // 7 seconds starting from 7
+                exhealTime = 9000; // 8 seconds starting from 8
                 inheal();
              //   Toast.makeText(MainActivity.this, "Button is clicked", Toast.LENGTH_SHORT).show();
 
@@ -132,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void inheal() {
 
-        textGuide.setText("Inheal");
+        textGuide.setText("Inhale");
         ViewAnimator
                 .animate(imageView)
                     .scale(1,0)
@@ -141,14 +144,16 @@ public class MainActivity extends AppCompatActivity {
 
                 .start();
 
-        if (timeRunning) {
-            // Stop timer
-            stopInhealTime();
-        }// End of if statement
-        else {
-            // Start timer
-            startInhealTime();
-        }// End of else statement
+        startInhealTime();
+
+//        if (timeRunning) {
+//            // Stop timer
+//            stopInhealTime();
+//        }// End of if statement
+//        else {
+//            // Start timer
+//            startInhealTime();
+//        }// End of else statement
     }// End of startBreath()
 
 
@@ -160,8 +165,6 @@ public class MainActivity extends AppCompatActivity {
             public void onTick(long l) {
                 inhealTime = l;
                 changeTimeText();
-
-
             } // End of onTick ()
 
             @Override
@@ -170,13 +173,11 @@ public class MainActivity extends AppCompatActivity {
         } .start(); // End of CountDownTimer()
 
         timeRunning = true;
-     //   startBreathBtn.setText("Inheal");
-
     }// End of start ()
 
     public void stopInhealTime () {
         countDownTimer.cancel();
-        startBreathBtn.setText("Start after inheal");
+        startBreathBtn.setText("Start after inhale");
         timeRunning = false;
 
     }// End of Stop ()
@@ -255,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void exheal () {
 
-        textGuide.setText("Exheal");
+        textGuide.setText("Exhale");
         ViewAnimator
                 .animate(imageView)
             //    .startDelay(8000)
@@ -285,6 +286,8 @@ public class MainActivity extends AppCompatActivity {
         timeRunning = true;
       //  startBreathBtn.setText("Exheal");
 
+        
+
     }// End of startExhalTime ()
 
     public void stopExhealTime () {
@@ -293,6 +296,7 @@ public class MainActivity extends AppCompatActivity {
     //    startBreathBtn.setText("Start after hold");
         timeRunning = false;
 
+
     }// End of stopExhealTime ()
 
     public void changeExhealTimeText () {
@@ -300,6 +304,8 @@ public class MainActivity extends AppCompatActivity {
         int seconds = (int) exhealTime % 60000 / 1000;
         String secondsTime = "" + seconds;
         timer.setText(secondsTime);
+
+
 
     }// End of changeTimeText ()
 

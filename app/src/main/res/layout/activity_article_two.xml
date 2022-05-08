@@ -25,10 +25,10 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="39dp"
-                android:layout_marginEnd="45dp"
+                android:layout_marginEnd="21dp"
                 android:text="Healthy habits to reduce anxiety"
                 android:textColor="#FFFF"
-                android:textSize="20sp" />
+                android:textSize="22sp" />
 
             <ImageView
                 android:id="@+id/backBtn"

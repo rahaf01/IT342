@@ -17,8 +17,6 @@ public class ArticleTwo extends AppCompatActivity {
         setContentView(R.layout.activity_article_two);
 
         backBtn = (ImageView) findViewById(R.id.backBtn);
-
-
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

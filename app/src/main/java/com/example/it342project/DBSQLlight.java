@@ -75,7 +75,7 @@ public class DBSQLlight <pubilc> extends SQLiteOpenHelper {
     //........................................................................
 
     //Update users email (from view profile page)
-    public boolean updateEmail (String email, String password, String newEmail ) {
+    public boolean updateEmail (String email, String newEmail ) {
 
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues= new ContentValues();
