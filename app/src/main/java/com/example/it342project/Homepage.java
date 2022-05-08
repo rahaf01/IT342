@@ -43,7 +43,7 @@ public class Homepage extends AppCompatActivity {
         viewAchievements.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Goals.class);
+                Intent intent = new Intent(getApplicationContext(),UserGoals.class);
                 startActivity(intent);
             }// End of onClick()
         }); // End of setOnClickListener

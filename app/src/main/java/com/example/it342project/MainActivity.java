@@ -15,6 +15,9 @@ import com.github.florent37.viewanimator.ViewAnimator;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import java.text.DateFormat;
+import java.util.Calendar;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +40,12 @@ public class MainActivity extends AppCompatActivity {
 
     boolean isDone = false;
 
+
+    //////////////////////////////////////////
+    Calendar calendar;
+    String currentDate;
+    DBSQLlight DB = new DBSQLlight(this);
+    /////////////////////////////////////////
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -286,7 +295,11 @@ public class MainActivity extends AppCompatActivity {
         timeRunning = true;
       //  startBreathBtn.setText("Exheal");
 
-        
+        ///////////////////////////////////////////////////////////////////////////
+        calendar = Calendar.getInstance();
+        currentDate = DateFormat.getDateInstance().format(calendar.getTime());
+        Boolean insert = DB.insertData("", "", "currentDate", null);
+        ///////////////////////////////////////////////////////////////////////////
 
     }// End of startExhalTime ()
 
