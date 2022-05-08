@@ -24,7 +24,7 @@ public class UserGoals extends AppCompatActivity {
     // DBSQLlight DB = new DBSQLlight(this);
     //  String email = Login.userEmail;
     String count = MainActivity.counter.toString();
-    // String CurrentDate = MainActivity.currentDate;
+    String CurrentDate = MainActivity.currentDate;
 
 
     @Override
@@ -36,7 +36,7 @@ public class UserGoals extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),ArticlesMenu.class);
+                Intent intent = new Intent(getApplicationContext(),Homepage.class);
                 startActivity(intent);
             }// End of onClick()
         }); // End of setOnClickListener
@@ -47,7 +47,7 @@ public class UserGoals extends AppCompatActivity {
 
         counter.setText(count);
 
-        // date.setText(CurrentDate);
+        date.setText(CurrentDate);
         //-----------------------------------
     }
 }

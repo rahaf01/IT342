@@ -17,7 +17,10 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -76,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 holdTime = 8000; // 7 seconds starting from 7
                 exhealTime = 9000; // 8 seconds starting from 8
 
-                counter +=1;
+//                counter +=1;
             //    currentDate = DateFormat.getDateInstance().format(calendar.getTime());
 
                 inheal();
@@ -302,7 +305,9 @@ public class MainActivity extends AppCompatActivity {
         timeRunning = true;
 
         counter +=1;
-       // currentDate = DateFormat.getDateInstance().format(calendar.getTime());
+        currentDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
+
+        // currentDate = DateFormat.getDateInstance().format(calendar.getTime().toString());
       //  startBreathBtn.setText("Exheal");
 
         ///////////////////////////////////////////////////////////////////////////
